@@ -57,8 +57,8 @@ Laptop lambat? Tambahkan `--concurrency=2` di akhir perintah render.
 
 ## Audio: musik, sound effect & voiceover (sudah terpasang)
 Ketiga video sudah lengkap dengan audio, jadi tidak perlu tambah musik lagi di TikTok.
-- **Musik latar & sound effect**: dibuat sendiri secara sintetis oleh `scripts/buat-audio.py` (bebas hak cipta, aman dari klaim Content ID). Hasil: `public/audio/music.wav` dan `public/audio/sfx/*.wav`. Buat ulang dengan `python3 scripts/buat-audio.py` (butuh numpy).
-- **Voiceover**: suara pria Bahasa Indonesia dari Speko (provider Cartesia), satu file per video: `public/audio/vo-v1.wav`, `vo-v2.wav`, `vo-v3.wav`. Tiap kalimat sudah disinkronkan ke adegannya.
+- **Beat & sound effect gaya motion graphic** (boom, whoosh, glitch, ka-ching, pop, tick, check, riser): dibuat sendiri secara sintetis oleh `scripts/buat-audio.py` (bebas hak cipta, aman dari klaim Content ID). Hasil: `public/audio/music.wav` dan `public/audio/sfx/*.wav`. Buat ulang dengan `python3 scripts/buat-audio.py` (butuh numpy).
+- **Voiceover**: gaya kreator Gen Z yang energik (ada "anjir", "anjay") dari Speko (Google Gemini TTS, voice Puck), satu file per video: `public/audio/vo-v1.wav`, `vo-v2.wav`, `vo-v3.wav`. Tiap kalimat sudah disinkronkan ke adegannya.
 - **Pengaturan mix**: `src/SoundTrack.tsx` (daftar SFX per frame, volume musik otomatis turun saat ada voiceover).
 - Ganti voiceover: timpa file `public/audio/vo-vN.wav` dengan rekaman sendiri (durasi maks 28 detik), lalu render ulang. Kosongkan prop `voiceover` di `src/Root.tsx` untuk versi tanpa suara narator.
 

@@ -1,5 +1,5 @@
-"""Membuat musik latar & sound effect KasRapi secara sintetis (100% buatan sendiri,
-bebas hak cipta, aman dari klaim Content ID TikTok).
+"""Musik latar & sound effect KasRapi gaya motion graphic TikTok (energik, Gen Z).
+100% disintesis sendiri dengan numpy, bebas hak cipta, aman dari klaim Content ID.
 
 Jalankan:  python3 scripts/buat-audio.py
 Hasil:     public/audio/music.wav, public/audio/sfx/*.wav
@@ -12,241 +12,311 @@ import numpy as np
 
 SR = 44100
 ROOT = os.path.join(os.path.dirname(__file__), '..', 'public', 'audio')
-rng = np.random.default_rng(7)
+rng = np.random.default_rng(11)
 
 
-def save(name, x, stereo_width=0.0):
+# ------------------------------------------------------------------ util
+def save(name, x, width=0.0, peak=0.89):
     x = np.asarray(x, dtype=np.float64)
-    peak = np.max(np.abs(x)) or 1.0
-    x = x / peak * 0.89
-    if stereo_width:
-        d = int(SR * 0.012)
-        r = np.concatenate([np.zeros(d), x[:-d]])
-        l, r = x, x * (1 - stereo_width) + r * stereo_width
-    else:
-        l = r = x
-    data = (np.stack([l, r], axis=1) * 32767).astype(np.int16)
+    if x.ndim == 1:
+        if width:
+            d = int(SR * 0.011)
+            r = np.concatenate([np.zeros(d), x[:-d]])
+            x = np.stack([x, x * (1 - width) + r * width], 1)
+        else:
+            x = np.stack([x, x], 1)
+    x = np.tanh(x / (np.max(np.abs(x)) or 1) * 1.2) / np.tanh(1.2)  # soft clip = lebih "padat"
+    x = x / np.max(np.abs(x)) * peak
     path = os.path.join(ROOT, name)
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with wave.open(path, 'wb') as w:
         w.setnchannels(2)
         w.setsampwidth(2)
         w.setframerate(SR)
-        w.writeframes(data.tobytes())
-    print('ok', path, f'{len(x) / SR:.2f}s')
+        w.writeframes((x * 32767).astype(np.int16).tobytes())
+    print('ok', name, f'{len(x) / SR:.2f}s')
 
 
-def t_(dur):
-    return np.arange(int(SR * dur)) / SR
+def t_(d):
+    return np.arange(int(SR * d)) / SR
 
 
-def env(n, a=0.005, d=0.2, s=0.0, r=0.05, sus=None):
-    """ADSR sederhana, n sampel."""
-    out = np.zeros(n)
-    A, D, R = int(a * SR), int(d * SR), int(r * SR)
-    S = max(n - A - D - R, 0) if sus is None else int(sus * SR)
-    seg = [np.linspace(0, 1, max(A, 1)), np.linspace(1, s, max(D, 1)), np.full(S, s), np.linspace(s, 0, max(R, 1))]
-    e = np.concatenate(seg)[:n]
-    out[: len(e)] = e
-    return out
+def noise(d):
+    return rng.standard_normal(int(SR * d))
 
 
-def lowpass(x, k=0.15):
+def fft_filter(x, lo=None, hi=None):
+    """Filter pita statis via FFT (cepat, tanpa scipy)."""
+    X = np.fft.rfft(x)
+    f = np.fft.rfftfreq(len(x), 1 / SR)
+    m = np.ones_like(f)
+    if lo:
+        m *= 1 / (1 + (lo / np.maximum(f, 1)) ** 4)
+    if hi:
+        m *= 1 / (1 + (f / hi) ** 4)
+    return np.fft.irfft(X * m, len(x))
+
+
+def svf_sweep(x, fc, q=0.7):
+    """State-variable band-pass dengan cutoff berubah per sampel (untuk whoosh)."""
+    lp = bp = 0.0
     y = np.zeros_like(x)
-    acc = 0.0
+    damp = 1 / q
     for i, v in enumerate(x):
-        acc += k * (v - acc)
-        y[i] = acc
+        f = 2 * np.sin(np.pi * min(fc[i], SR / 6) / SR)
+        hp = v - lp - damp * bp
+        bp += f * hp
+        lp += f * bp
+        y[i] = bp
     return y
 
 
-def note(f):
-    return 440.0 * 2 ** ((f - 69) / 12)
+def sine_sweep(f):
+    return np.sin(2 * np.pi * np.cumsum(f) / SR)
 
 
-# ----------------------------------------------------------------- MUSIK
-BPM = 112
-BEAT = 60 / BPM
-DUR = 28.0
-N = int(SR * DUR)
-mix = np.zeros(N)
+def reverb(x, mix=0.25, d=0.9):
+    """Reverb ringan: noise meluruh dikonvolusi via FFT."""
+    ir_t = t_(d)
+    ir = rng.standard_normal(len(ir_t)) * np.exp(-ir_t * 6)
+    ir = fft_filter(ir, hi=6000)
+    n = len(x) + len(ir)
+    wet = np.fft.irfft(np.fft.rfft(x, n) * np.fft.rfft(ir, n), n)[: len(x) + len(ir) - 1]
+    wet = wet / (np.max(np.abs(wet)) or 1) * np.max(np.abs(x))
+    out = np.zeros(len(wet))
+    out[: len(x)] += x
+    return out + wet * mix
 
 
-def put(buf, start_s, x, gain=1.0):
-    i = int(start_s * SR)
-    if i >= len(buf):
-        return
-    j = min(len(buf), i + len(x))
-    buf[i:j] += x[: j - i] * gain
+def fit(x, n):
+    return np.pad(x, (0, max(0, n - len(x))))[:n]
 
 
-def kick():
+# ------------------------------------------------------------------ SFX
+def whoosh(d=0.6, up=True):
+    t = t_(d)
+    p = t / d
+    fc = 300 * (14 ** p) if up else 4200 * (14 ** -p)
+    y = svf_sweep(noise(d), fc, q=1.4)
+    env = (p ** 1.6) * np.exp(-((p - 0.85) * 6) ** 2 * (p > 0.85)) if up else np.exp(-p * 5) * np.minimum(p * 30, 1)
+    return y * env
+
+
+def swoosh_short():
+    return whoosh(0.28, up=False)
+
+
+def boom():
+    """Sub drop + klik transien (hentakan saat teks muncul)."""
+    t = t_(1.0)
+    f = 42 + 140 * np.exp(-t * 22)
+    sub = sine_sweep(f) * np.exp(-t * 3.2)
+    click = fft_filter(noise(1.0), lo=2500) * np.exp(-t * 220) * 0.6
+    body = fft_filter(noise(1.0), hi=900) * np.exp(-t * 18) * 0.35
+    return reverb(sub + click + body, 0.12, 0.6)
+
+
+def thump():
     t = t_(0.35)
-    f = 50 + 110 * np.exp(-t * 28)
-    ph = 2 * np.pi * np.cumsum(f) / SR
-    return np.sin(ph) * np.exp(-t * 9)
-
-
-def hat(open_=False):
-    t = t_(0.18 if open_ else 0.05)
-    n = rng.standard_normal(len(t))
-    n = n - lowpass(n, 0.5)
-    return n * np.exp(-t * (18 if open_ else 70))
-
-
-def clap():
-    t = t_(0.2)
-    n = rng.standard_normal(len(t))
-    n = n - lowpass(n, 0.12)
-    e = np.exp(-t * 22) + 0.6 * np.exp(-np.maximum(t - 0.012, 0) * 30) * (t > 0.012)
-    return n * e
-
-
-def pluck(m, dur=0.32):
-    t = t_(dur)
-    f = note(m)
-    x = (np.sin(2 * np.pi * f * t) + 0.35 * np.sin(2 * np.pi * 2 * f * t) + 0.12 * np.sin(2 * np.pi * 3 * f * t))
-    return x * np.exp(-t * 9)
-
-
-def pad(ms, dur):
-    t = t_(dur)
-    x = np.zeros(len(t))
-    for m in ms:
-        f = note(m)
-        for det in (-0.12, 0.0, 0.12):
-            ff = f * 2 ** (det / 12)
-            x += np.sign(np.sin(2 * np.pi * ff * t)) * 0.15 + np.sin(2 * np.pi * ff * t)
-    x = lowpass(x, 0.06)
-    return x * env(len(t), a=0.25, d=0.2, s=0.8, r=0.4)
-
-
-def bass(m, dur):
-    t = t_(dur)
-    f = note(m)
-    x = np.sin(2 * np.pi * f * t) + 0.3 * np.sin(2 * np.pi * 2 * f * t)
-    return x * env(len(t), a=0.005, d=0.15, s=0.6, r=0.05)
-
-
-# Progresi Am - F - C - G (vibe positif, "naik")
-CHORDS = [(57, [69, 72, 76]), (53, [65, 69, 72]), (48, [67, 72, 76]), (55, [67, 71, 74])]
-BAR = BEAT * 4
-bars = int(DUR / BAR) + 1
-pads = np.zeros(N)
-drums = np.zeros(N)
-lead = np.zeros(N)
-bassb = np.zeros(N)
-for b in range(bars):
-    root, ch = CHORDS[b % 4]
-    t0 = b * BAR
-    put(pads, t0, pad(ch, BAR + 0.3), 0.18)
-    for k in range(8):  # bass 8th note
-        put(bassb, t0 + k * BEAT / 2, bass(root - 12 if k % 2 == 0 else root, BEAT / 2 * 0.9), 0.5)
-    arp = [ch[0], ch[1], ch[2], ch[1] + 12, ch[2], ch[1], ch[0] + 12, ch[2]]
-    for k, m in enumerate(arp):
-        put(lead, t0 + k * BEAT / 2, pluck(m), 0.22)
-    intro = t0 < 3.0  # 3 detik pertama lebih tipis agar hook terdengar
-    for k in range(4):
-        put(drums, t0 + k * BEAT, kick(), 0.9 if not intro else 0.6)
-        if not intro:
-            put(drums, t0 + k * BEAT + BEAT / 2, hat(k % 2 == 1), 0.25)
-            put(drums, t0 + k * BEAT + BEAT / 4, hat(), 0.12)
-            put(drums, t0 + k * BEAT + 3 * BEAT / 4, hat(), 0.12)
-        if k in (1, 3) and not intro:
-            put(drums, t0 + k * BEAT, clap(), 0.35)
-
-# sidechain "pumping" dari kick
-pump = np.ones(N)
-for b in range(int(DUR / BEAT) + 1):
-    i = int(b * BEAT * SR)
-    L = int(0.22 * SR)
-    seg = 1 - 0.55 * np.exp(-np.arange(L) / (0.06 * SR))
-    j = min(N, i + L)
-    if i < N:
-        pump[i:j] = np.minimum(pump[i:j], seg[: j - i])
-music = drums + (pads + lead + bassb) * pump
-fade = np.ones(N)
-fade[: int(0.05 * SR)] = np.linspace(0, 1, int(0.05 * SR))
-fade[-int(1.5 * SR):] = np.linspace(1, 0, int(1.5 * SR))
-save('music.wav', music * fade, stereo_width=0.35)
-
-# ----------------------------------------------------------------- SFX
-
-
-def whoosh(dur=0.55, up=True):
-    t = t_(dur)
-    n = rng.standard_normal(len(t))
-    k = np.linspace(0.02, 0.35, len(t)) if up else np.linspace(0.35, 0.02, len(t))
-    y = np.zeros_like(n)
-    acc = 0.0
-    for i, v in enumerate(n):
-        acc += k[i] * (v - acc)
-        y[i] = acc
-    e = np.sin(np.pi * np.clip(t / dur, 0, 1)) ** 2
-    return y * e
+    f = 55 + 95 * np.exp(-t * 35)
+    return sine_sweep(f) * np.exp(-t * 11) + fft_filter(noise(0.35), lo=3000) * np.exp(-t * 300) * 0.4
 
 
 def pop():
-    t = t_(0.14)
-    f = 300 + 900 * np.exp(-t * 40)
-    return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 30)
+    t = t_(0.12)
+    f = 520 + 1400 * np.exp(-t * 55)
+    return sine_sweep(f) * np.exp(-t * 38) * np.minimum(t * 2000, 1)
 
 
-def tap():
-    t = t_(0.06)
-    return (np.sin(2 * np.pi * 1800 * t) * 0.6 + rng.standard_normal(len(t)) * 0.4) * np.exp(-t * 90)
+def tick():
+    t = t_(0.05)
+    x = np.sin(2 * np.pi * 3200 * t) * 0.5 + fft_filter(noise(0.05), lo=4000) * 0.6
+    return x * np.exp(-t * 160)
+
+
+def glitch():
+    """Stutter digital: potongan buzz & noise acak (saat uang 'dipotong')."""
+    d = 0.32
+    out = np.zeros(int(SR * d))
+    pos = 0
+    while pos < len(out):
+        L = int(SR * rng.uniform(0.012, 0.04))
+        tt = np.arange(L) / SR
+        kind = rng.integers(0, 3)
+        if kind == 0:
+            seg = np.sign(np.sin(2 * np.pi * rng.uniform(90, 400) * tt))
+        elif kind == 1:
+            seg = fft_filter(rng.standard_normal(L), lo=1500) * 1.4
+        else:
+            seg = np.sin(2 * np.pi * rng.uniform(800, 2400) * tt)
+        seg *= rng.uniform(0.4, 1.0)
+        out[pos: pos + L] = seg[: len(out) - pos]
+        pos += L + int(SR * rng.uniform(0, 0.01))
+    t = t_(d)
+    return fft_filter(out, hi=7000) * np.exp(-t * 4) + fit(thump(), len(out)) * 0.5
+
+
+def err():
+    t = t_(0.3)
+    x = np.sign(np.sin(2 * np.pi * 140 * t)) * 0.5 + np.sign(np.sin(2 * np.pi * 147 * t)) * 0.5
+    return fft_filter(x, hi=2200) * np.exp(-t * 8) * (np.minimum(t * 400, 1))
+
+
+def cash():
+    """Ka-ching: klik laci + dua lonceng terang."""
+    t = t_(1.2)
+    x = fft_filter(noise(1.2), lo=1800) * np.exp(-t * 90) * 0.7
+    for start, base in ((0.05, 2093.0), (0.13, 2637.0)):
+        tt = np.maximum(t - start, 0)
+        on = t >= start
+        for k, a in ((1, 1.0), (2.76, 0.45), (5.4, 0.25)):
+            x += on * a * np.sin(2 * np.pi * base * k * tt) * np.exp(-tt * (5 + k))
+    return reverb(x, 0.2, 0.7)
 
 
 def ding():
-    t = t_(1.1)
+    t = t_(1.0)
     x = np.zeros(len(t))
-    for f, a in ((1318.5, 1.0), (1975.5, 0.6), (2637, 0.35)):
-        x += a * np.sin(2 * np.pi * f * t) * np.exp(-t * 4)
-    x += 0.8 * np.sin(2 * np.pi * 987.8 * t) * np.exp(-t * 6) * (t < 0.12)
-    return x
-
-
-def coin_drop():
-    """Bunyi 'minus' turun (uang terpotong)."""
-    t = t_(0.28)
-    f = 700 * np.exp(-t * 5)
-    sq = np.sign(np.sin(2 * np.pi * np.cumsum(f) / SR))
-    return lowpass(sq, 0.25) * np.exp(-t * 9)
-
-
-def impact():
-    t = t_(0.9)
-    f = 40 + 80 * np.exp(-t * 12)
-    b = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 4)
-    n = rng.standard_normal(len(t))
-    return b + lowpass(n, 0.08) * np.exp(-t * 10) * 0.8
-
-
-def riser(dur=1.2):
-    t = t_(dur)
-    f = 200 * 2 ** (t / dur * 3)
-    tone = np.sin(2 * np.pi * np.cumsum(f) / SR) * 0.3
-    n = rng.standard_normal(len(t)) * 0.5
-    return (tone + n - lowpass(n, 0.3)) * (t / dur) ** 2
+    for f, a in ((1568.0, 1.0), (2349.3, 0.5), (3136.0, 0.25)):
+        x += a * np.sin(2 * np.pi * f * t) * np.exp(-t * 5)
+    return reverb(x * np.minimum(t * 3000, 1), 0.2, 0.6)
 
 
 def check():
+    """Notif sukses: dua nada naik, bulat."""
+    t = t_(0.45)
+    a = np.sin(2 * np.pi * 1046.5 * t) * np.exp(-t * 18)
+    tb = np.maximum(t - 0.07, 0)
+    b = (t >= 0.07) * np.sin(2 * np.pi * 1568 * tb) * np.exp(-tb * 10)
+    return (a + b) * np.minimum(t * 3000, 1)
+
+
+def riser(d=1.3):
+    t = t_(d)
+    p = t / d
+    y = svf_sweep(noise(d), 400 * (20 ** p), q=2.5)
+    tone = sine_sweep(220 * 2 ** (p * 3)) * 0.25
+    return (y + tone) * p ** 2.2
+
+
+SFX = {
+    'whoosh': whoosh(), 'swipe': swoosh_short(), 'boom': boom(), 'thump': thump(),
+    'pop': pop(), 'tick': tick(), 'glitch': glitch(), 'err': err(), 'cash': cash(),
+    'ding': ding(), 'check': check(), 'riser': riser(),
+}
+for k, v in SFX.items():
+    save(f'sfx/{k}.wav', v, width=0.25 if k in ('whoosh', 'swipe', 'riser') else 0.0)
+
+# ------------------------------------------------------------------ MUSIK
+# Beat energik 150 BPM (half-time feel), progresi minor Fm-Db-Ab-Eb ala konten kreator.
+BPM = 150
+B = 60 / BPM
+DUR = 28.0
+N = int(SR * DUR)
+
+
+def put(buf, s, x, g=1.0):
+    i = int(s * SR)
+    if i >= len(buf):
+        return
+    j = min(len(buf), i + len(x))
+    buf[i:j] += x[: j - i] * g
+
+
+def note(m):
+    return 440.0 * 2 ** ((m - 69) / 12)
+
+
+def kick():
+    t = t_(0.4)
+    f = 48 + 170 * np.exp(-t * 30)
+    return sine_sweep(f) * np.exp(-t * 7) + fft_filter(noise(0.4), lo=3000) * np.exp(-t * 400) * 0.5
+
+
+def snare():
     t = t_(0.35)
-    a = np.sin(2 * np.pi * 880 * t) * np.exp(-t * 14) * (t < 0.12)
-    b = np.sin(2 * np.pi * 1318.5 * t) * np.exp(-np.maximum(t - 0.08, 0) * 12) * (t >= 0.08)
-    return a + b
+    body = sine_sweep(200 + 60 * np.exp(-t * 40)) * np.exp(-t * 25)
+    n = fft_filter(noise(0.35), lo=1200, hi=9000) * np.exp(-t * 14)
+    return reverb(body * 0.6 + n, 0.2, 0.5)
 
 
-def swipe():
-    return whoosh(0.3, up=False)
+def hat(open_=False):
+    d = 0.2 if open_ else 0.05
+    t = t_(d)
+    return fft_filter(noise(d), lo=7000) * np.exp(-t * (14 if open_ else 90))
 
 
-save('sfx/whoosh.wav', whoosh())
-save('sfx/swipe.wav', swipe())
-save('sfx/pop.wav', pop())
-save('sfx/tap.wav', tap())
-save('sfx/ding.wav', ding())
-save('sfx/minus.wav', coin_drop())
-save('sfx/impact.wav', impact())
-save('sfx/riser.wav', riser())
-save('sfx/check.wav', check())
+def sub808(m, d):
+    t = t_(d)
+    f = note(m) * (1 + 0.6 * np.exp(-t * 30))
+    x = sine_sweep(f)
+    x = np.tanh(x * 1.8)
+    return x * np.minimum(t * 300, 1) * np.exp(-t * 1.2) * np.minimum((d - t) * 60, 1)
+
+
+def pluck(m, d=0.28):
+    t = t_(d)
+    f = note(m)
+    x = np.zeros(len(t))
+    for det in (-0.08, 0.08):
+        ph = 2 * np.pi * f * 2 ** (det / 12) * t
+        x += 2 * ((ph / (2 * np.pi)) % 1) - 1  # saw
+    return fft_filter(x, hi=3800) * np.exp(-t * 11)
+
+
+def pad(ms, d):
+    t = t_(d)
+    x = np.zeros(len(t))
+    for m in ms:
+        for det in (-0.12, 0, 0.12):
+            ph = 2 * np.pi * note(m) * 2 ** (det / 12) * t
+            x += 2 * ((ph / (2 * np.pi)) % 1) - 1
+    x = fft_filter(x, hi=1600)
+    return x * np.minimum(t / 0.2, 1) * np.minimum((d - t) / 0.3, 1)
+
+
+CH = [(41, [65, 68, 72]), (37, [65, 68, 73]), (44, [63, 68, 72]), (39, [63, 67, 70])]
+BAR = B * 4
+drums = np.zeros(N)
+bass = np.zeros(N)
+syn = np.zeros(N)
+pads = np.zeros(N)
+nb = int(DUR / BAR) + 1
+for b in range(nb):
+    t0 = b * BAR
+    root, ch = CH[b % 4]
+    intro = t0 < 1.5
+    put(pads, t0, pad(ch, BAR + 0.2), 0.12)
+    if not intro:
+        put(bass, t0, sub808(root - 12, B * 2.5), 0.8)
+        put(bass, t0 + B * 2.75, sub808(root - 12 + (3 if b % 2 else 0), B * 1.2), 0.7)
+    seq = [ch[0], ch[2], ch[1] + 12, ch[2], ch[0] + 12, ch[2], ch[1], ch[2] + 12]
+    for k, m in enumerate(seq):
+        put(syn, t0 + k * B / 2, pluck(m), 0.22 if k % 2 == 0 else 0.15)
+    # kick pola trap: 1, 2&, (4& variasi)
+    for kk in ((0,), (1.5,), (3.5,) if b % 2 else ()):
+        for s in kk:
+            put(drums, t0 + s * B, kick(), 0.95 if not intro else 0.5)
+    if not intro:
+        put(drums, t0 + 2 * B, snare(), 0.55)
+        for k in range(8):
+            put(drums, t0 + k * B / 2, hat(), 0.18 if k % 2 else 0.25)
+        if b % 2 == 1:  # roll hi-hat ala trap di akhir bar
+            for k in range(6):
+                put(drums, t0 + 3 * B + k * B / 6, hat(), 0.14 + 0.02 * k)
+        put(drums, t0 + 3.5 * B, hat(True), 0.12)
+
+pump = np.ones(N)
+for k in range(int(DUR / B) + 1):
+    i = int(k * B * SR)
+    L = int(0.2 * SR)
+    seg = 1 - 0.5 * np.exp(-np.arange(L) / (0.05 * SR))
+    j = min(N, i + L)
+    if i < N:
+        pump[i:j] = np.minimum(pump[i:j], seg[: j - i])
+music = drums + bass * 0.9 + (syn + pads) * pump
+music = fft_filter(music, lo=30)
+fade = np.ones(N)
+fade[: int(0.03 * SR)] = np.linspace(0, 1, int(0.03 * SR))
+fade[-int(1.2 * SR):] = np.linspace(1, 0, int(1.2 * SR))
+save('music.wav', music * fade, width=0.3)
