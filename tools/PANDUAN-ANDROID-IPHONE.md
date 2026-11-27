@@ -1,86 +1,49 @@
-# Panduan Membuka KasRapi di Android & iPhone
+# Panduan Memasang KasRapi di Android, iPhone & Laptop
 
 Terima kasih sudah membeli **KasRapi — Buku Kas, Stok & Laba UMKM**.
-Aplikasi Anda adalah **1 file** bernama **`Aplikasi-UMKM.html`**. Tidak perlu install aplikasi dari Play Store, tidak perlu akun, dan tidak perlu kuota internet. Semua data tersimpan di HP/laptop Anda sendiri.
+KasRapi dibuka lewat **link**, lalu ikonnya dipasang di layar HP seperti aplikasi biasa. **Tidak perlu aplikasi tambahan, tidak perlu akun, dan gratis.** Internet hanya dibutuhkan sekali saat pertama membuka link. Setelah itu KasRapi jalan **tanpa kuota**, dan semua data tersimpan di HP/laptop Anda sendiri.
 
-> Baca bagian yang sesuai dengan HP Anda saja. Butuh waktu sekitar 3 menit.
+**Link aplikasi KasRapi:**
+**https://utamaibam-commits.github.io/PRODUK-DIGITAL1/kasrapi/**
+
+> Baca bagian yang sesuai dengan HP Anda saja. Butuh waktu sekitar 1 menit.
 
 ---
 
 ## A. Pengguna ANDROID (Samsung, Xiaomi, Oppo, Vivo, Realme, dll.)
 
-### Langkah 1 — Unduh file dari Lynk.id
-1. Buka email bukti pembelian Lynk.id atau halaman "Pesanan Saya" di Lynk.id.
-2. Ketuk tombol **Unduh / Download** pada produk KasRapi.
-3. Tunggu sampai muncul tulisan "Unduhan selesai". File otomatis masuk ke folder **Download**.
-
-### Langkah 2 — Temukan file di HP
-1. Buka aplikasi pengelola file. Namanya berbeda tiap merek HP:
-   - Samsung: **File Saya** (My Files)
-   - Xiaomi/Redmi/POCO: **Pengelola File**
-   - Oppo/Realme/Vivo: **File Manager** / **File Saya**
-   - Atau **Files by Google**
-2. Masuk ke folder **Download** (kadang di dalam "Penyimpanan internal").
-3. Cari file bernama **Aplikasi-UMKM.html**.
-
-### Langkah 3 — Buka dengan Google Chrome
-1. **Ketuk lama** (tahan) file **Aplikasi-UMKM.html**.
-2. Pilih **Buka dengan** / **Open with** → pilih **Chrome**.
-3. Kalau ada pilihan "Selalu" atau "Hanya sekali", pilih **Selalu** dengan Chrome.
-4. Aplikasi KasRapi akan terbuka. Ketuk **Isi Data Contoh** untuk mencoba.
-
-> **Jika yang muncul tulisan kode/teks aneh**, artinya file terbuka di penampil teks. Ulangi langkah 3 dan pastikan memilih **Chrome**.
-
-### Langkah 4 — Pasang ikon di Layar Utama (seperti aplikasi biasa)
-1. Saat KasRapi terbuka di Chrome, ketuk **titik tiga ⋮** di pojok kanan atas.
-2. Pilih **Tambahkan ke Layar utama** (Add to Home screen).
-3. Beri nama **KasRapi** → ketuk **Tambahkan**.
-4. Ikon KasRapi muncul di layar HP. Mulai sekarang buka dari ikon ini.
-
-> **Menu "Tambahkan ke Layar utama" tidak ada?** Beberapa versi Chrome menyembunyikannya untuk file di HP. Gunakan salah satu cara ini:
-> - Ketuk ikon bintang ☆ (Bookmark) di Chrome, lalu buka dari menu Bookmark.
-> - Di aplikasi **File Saya**, ketuk lama file → **Tambahkan ke layar Beranda / Buat pintasan** (tersedia di sebagian HP Samsung/Xiaomi).
+1. Ketuk link aplikasi KasRapi. Pastikan terbuka di **Google Chrome**.
+   - Jika terbuka di dalam WhatsApp/Instagram/Lynk.id, ketuk menu **⋮** → **Buka di Chrome**.
+2. Saat KasRapi tampil, ketuk **titik tiga ⋮** di pojok kanan atas Chrome.
+3. Pilih **Instal aplikasi** atau **Tambahkan ke Layar utama**. (Kadang Chrome juga langsung menawarkan tombol **Instal** di bagian bawah layar.)
+4. Ketuk **Instal** / **Tambahkan**. Ikon **KasRapi** muncul di layar HP.
+5. Mulai sekarang buka dari ikon ini. Ketuk **Isi Data Contoh** untuk mencoba.
 
 ---
 
-## B. Pengguna iPHONE / iPAD (iOS)
+## B. Pengguna iPHONE / iPAD
 
-**Penting dibaca dulu:** iPhone tidak bisa menjalankan file `.html` langsung dari aplikasi **File** bawaan. Kalau dibuka di sana, yang tampil hanya pratinjau atau tulisan kode, dan tombol tidak bisa ditekan. Solusinya adalah memakai aplikasi penampil **gratis** yang bisa menjalankan file HTML secara **offline**. Cukup dipasang sekali.
-
-Aplikasi yang kami sarankan: **Documents (Readdle)** (gratis di App Store).
-
-### Langkah 1 — Simpan file dari Lynk.id ke iPhone
-1. Buka link unduhan Lynk.id menggunakan **Safari**.
-2. Ketuk tombol **Unduh / Download** → saat muncul pertanyaan, ketuk **Unduh**.
-3. Ketuk ikon **panah biru ⬇︎** di kolom alamat Safari untuk melihat unduhan.
-4. File tersimpan otomatis di aplikasi **File (Files) → Unduhan (Downloads)**.
-
-### Langkah 2 — Pasang Documents (Readdle) (sekali saja)
-1. Buka **App Store** → cari **Documents Readdle**, lalu pilih **Documents - File Manager App** dari **Readdle Technologies** (ikon huruf D kuning-hijau; lewati hasil berlabel *Iklan*) → ketuk **Dapatkan**.
-2. Buka aplikasinya sekali, lewati halaman perkenalan.
-
-### Langkah 3 — Pindahkan file ke Documents
-1. Buka aplikasi **File** → **Unduhan**.
-2. **Ketuk lama** file **Aplikasi-UMKM.html** → pilih **Bagikan** (ikon kotak dengan panah ke atas).
-3. Pilih **Documents** (jika tidak terlihat, geser ke kanan → **Lainnya** → aktifkan Documents).
-4. File sekarang ada di dalam aplikasi Documents.
-
-### Langkah 4 — Buka KasRapi
-1. Buka aplikasi **Documents** → ketuk file **Aplikasi-UMKM.html**.
-2. KasRapi tampil penuh. Ketuk **Isi Data Contoh** untuk mencoba.
-
-### Langkah 5 — Agar mudah dibuka setiap hari
-1. Di layar iPhone, tekan lama ikon **Documents** lalu geser ke **Dock** (baris paling bawah).
-2. Di dalam Documents, ketuk **⋯** di samping file → **Tambahkan ke Favorit**.
-
-> **Tips iPhone:** selalu buka file dari aplikasi **Documents** yang sama. Kalau suatu saat dibuka dari aplikasi lain, data yang tersimpan tidak ikut terbawa.
+1. Buka link aplikasi KasRapi di **Safari** (ikon kompas biru). Harus Safari, karena hanya Safari yang bisa memasang ikon ke layar utama dengan sempurna.
+   - Jika terbuka di dalam WhatsApp/Instagram/Lynk.id, ketuk ikon kompas atau **⋯** → **Buka di Safari**. Atau salin link lalu tempel di Safari.
+2. Ketuk tombol **Bagikan** (kotak dengan panah ke atas) di bagian bawah layar. Di iPad tombolnya di kanan atas.
+3. Geser daftar ke bawah → ketuk **Tambah ke Layar Utama** → ketuk **Tambah**.
+4. Ikon **KasRapi** muncul di layar iPhone.
+5. **Mulai mencatat dari ikon itu**, bukan dari Safari. Di iPhone, data yang dicatat lewat ikon dan lewat Safari tersimpan terpisah.
 
 ---
 
 ## C. Pengguna LAPTOP / KOMPUTER (Windows / Mac)
-1. Unduh file dari Lynk.id, biasanya masuk ke folder **Downloads**.
-2. Klik dua kali **Aplikasi-UMKM.html**. File akan terbuka di Chrome, Edge, Safari, atau Firefox.
-3. Agar mudah, pindahkan file ke folder tetap (misalnya **Dokumen**) lalu tandai halaman sebagai Bookmark (Ctrl+D / Cmd+D).
+
+**Cara 1 (disarankan): pakai link**
+1. Buka link aplikasi KasRapi di **Chrome** atau **Edge**.
+2. Klik ikon **Instal** (layar dengan panah ke bawah) di ujung kanan kolom alamat → **Instal**. KasRapi muncul di menu Start / Launchpad.
+   - Safari di Mac: menu **File** → **Tambahkan ke Dock**.
+
+**Cara 2: pakai file**
+1. Unduh file **Aplikasi-UMKM.html** dari Lynk.id, pindahkan ke folder tetap (misalnya **Dokumen**).
+2. Klik dua kali file tersebut, lalu simpan sebagai Bookmark (Ctrl+D / Cmd+D).
+
+> Data di Cara 1 dan Cara 2 tersimpan terpisah. Pilih salah satu dan gunakan terus.
 
 ---
 
@@ -89,21 +52,24 @@ Aplikasi yang kami sarankan: **Documents (Readdle)** (gratis di App Store).
 | Lakukan ✅ | Hindari ❌ |
 |---|---|
 | **Backup setiap minggu**: Pengaturan → Backup Data. Simpan file `.json` ke Google Drive / WhatsApp ke nomor sendiri. | Menghapus "Riwayat & data situs" / "Clear browsing data" di browser. Ini bisa menghapus catatan KasRapi. |
-| Selalu buka KasRapi lewat jalur/aplikasi yang sama. | Membuka di mode Penyamaran/Incognito (data tidak disimpan). |
-| Saat ganti HP: Backup di HP lama → kirim file `.json` → buka KasRapi di HP baru → Pengaturan → Restore Data. | Memindahkan/ganti nama file HTML tanpa backup dulu (bisa membuat data tidak terbaca). |
+| Selalu buka KasRapi lewat **ikon yang sama**. | Membuka di mode Penyamaran/Incognito (data tidak disimpan). |
+| Saat ganti HP: Backup di HP lama → kirim file `.json` → pasang KasRapi di HP baru → Pengaturan → Restore Data. | Menghapus ikon KasRapi tanpa backup dulu (di iPhone, data ikut terhapus). |
 
 ---
 
 ## E. Masalah yang Sering Terjadi
 
-**Yang muncul hanya tulisan kode.**
-File terbuka di penampil teks. Android: buka dengan **Chrome**. iPhone: buka lewat **Documents (Readdle)**.
+**Menu "Instal aplikasi" / "Tambah ke Layar Utama" tidak ada.**
+Pastikan link dibuka di **Chrome** (Android) atau **Safari** (iPhone), bukan di dalam WhatsApp/Instagram. Di iPhone, geser daftar menu Bagikan sampai paling bawah.
+
+**Tanpa internet, KasRapi tidak terbuka.**
+KasRapi perlu dibuka **sekali dengan internet** supaya tersimpan di HP. Nyalakan data sebentar, buka ikon KasRapi, tunggu tampil, lalu matikan lagi.
 
 **Data saya hilang setelah dibuka lagi.**
-Kemungkinan file dibuka lewat aplikasi/jalur berbeda, atau data browser terhapus. Coba buka lewat jalur yang biasa. Lalu pulihkan dari file backup terakhir (Pengaturan → Restore Data).
+Kemungkinan dibuka lewat jalur berbeda (misalnya Safari, bukan ikon), atau data browser terhapus. Buka lewat ikon yang biasa, lalu pulihkan dari backup terakhir (Pengaturan → Restore Data).
 
 **Tombol Kirim ke WhatsApp tidak jalan.**
-Tombol ini satu-satunya fitur yang butuh internet (untuk membuka WhatsApp). Nyalakan data sebentar, lalu coba lagi.
+Tombol ini butuh internet untuk membuka WhatsApp. Nyalakan data sebentar, lalu coba lagi.
 
 **Cetak / Simpan PDF.**
 Menu Laporan → **Cetak / Simpan PDF** → pada jendela cetak pilih **Simpan sebagai PDF**.

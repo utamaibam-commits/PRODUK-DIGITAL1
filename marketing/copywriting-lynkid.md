@@ -23,7 +23,7 @@ Skill yang dipakai: `copywriting` (diagnosis + three-question gate + aturan "No 
 
 ## 1. Versi pendek (deskripsi singkat / caption Lynk.id, maks ±300 karakter)
 
-> Catat jualan 5 detik, langsung kelihatan laba bersih setelah dipotong admin Shopee & TikTok Shop. Stok berkurang otomatis, uang pribadi terpisah dari uang usaha. 1 file, jalan di Android, iPhone & laptop. Sekali bayar, tanpa langganan bulanan, bisa dipakai 100% offline tanpa kuota internet.
+> Catat jualan 5 detik, langsung kelihatan laba bersih setelah dipotong admin Shopee & TikTok Shop. Stok berkurang otomatis, uang pribadi terpisah dari uang usaha. Tinggal buka link & pasang ikon, jalan di Android, iPhone & laptop. Sekali bayar, tanpa langganan bulanan, bisa dipakai 100% offline tanpa kuota internet.
 
 ---
 
@@ -83,8 +83,8 @@ Tidak ada akun, tidak ada server. Data tersimpan otomatis di perangkat. Fitur Ba
 ---
 
 ### Cara kerjanya
-1. **Unduh 1 file** dari Lynk.id setelah bayar.
-2. **Buka di HP atau laptop.** Panduan bergambar khusus **Android** dan **iPhone** sudah disertakan, termasuk cara menaruh ikon di layar utama.
+1. **Buka link aplikasi** yang Anda terima setelah bayar.
+2. **Pasang ikonnya di layar HP** (Chrome: ⋮ → Instal aplikasi; iPhone Safari: Bagikan → Tambah ke Layar Utama). Tanpa aplikasi tambahan, tanpa App Store/Play Store. Panduan bergambar sudah disertakan.
 3. **Tekan "Isi Data Contoh"** untuk melihat simulasi usaha kuliner 35 hari, lalu hapus dan mulai catat usaha Anda.
 
 ---
@@ -95,7 +95,8 @@ Warung & toko kelontong, kuliner rumahan & frozen food, olshop fashion/kosmetik,
 ---
 
 ### Isi paket
-- `Aplikasi-UMKM.html`: aplikasi KasRapi (1 file, jalan offline)
+- **Link aplikasi KasRapi** untuk dipasang di layar HP/laptop (jalan offline setelah dibuka sekali)
+- `Aplikasi-UMKM.html`: versi file cadangan untuk laptop
 - `Panduan-Pengguna.html`: panduan bergambar Android & iPhone, bisa dibaca di HP atau dicetak
 - `PANDUAN-ANDROID-IPHONE.md`: panduan versi teks
 - Poster 1 halaman cara pasang di Android, iPhone & laptop (PNG untuk HP, PDF siap cetak)
@@ -106,10 +107,10 @@ Warung & toko kelontong, kuliner rumahan & frozen food, olshop fashion/kosmetik,
 ### Pertanyaan yang sering ditanyakan
 
 **Harus pakai internet?**
-Tidak. Internet hanya dipakai kalau Anda menekan tombol Kirim ke WhatsApp.
+Hanya sekali, saat pertama membuka link dan memasang ikon. Setelah itu jalan tanpa kuota. Internet dipakai lagi hanya kalau Anda menekan tombol Kirim ke WhatsApp.
 
 **Bisa di iPhone?**
-Bisa. Karena aturan iPhone, file HTML perlu dibuka lewat aplikasi gratis **Documents - File Manager App** dari Readdle (sekali pasang, tetap offline). Langkahnya ada di panduan.
+Bisa, tanpa aplikasi tambahan. Buka link KasRapi di Safari → Bagikan → **Tambah ke Layar Utama**. Ikon KasRapi muncul seperti aplikasi biasa dan jalan offline.
 
 **Ada biaya bulanan?**
 Tidak ada. Bayar sekali Rp59.000, pakai seterusnya.
@@ -139,7 +140,7 @@ Beda. Kalkulator HPP membantu menentukan harga jual sebelum berjualan. KasRapi m
 ### Penutup (CTA akhir)
 Usaha Anda sudah bekerja keras setiap hari. Sekarang saatnya tahu berapa yang benar-benar Anda dapat.
 
-**Rp59.000, sekali bayar. Langsung unduh, langsung pakai, tanpa kuota.**
+**Rp59.000, sekali bayar. Buka link, pasang ikon, langsung pakai tanpa kuota.**
 
 👉 **Ambil KasRapi Sekarang**
 
@@ -153,10 +154,11 @@ Usaha Anda sudah bekerja keras setiap hari. Sekarang saatnya tahu berapa yang be
 
 ## 4. Pesan otomatis setelah pembelian (Lynk.id "pesan untuk pembeli")
 > Terima kasih sudah membeli KasRapi 🙏
-> 1) Unduh file zip, ekstrak (Android: ketuk file zip → Ekstrak; iPhone: ketuk file zip di aplikasi File).
-> 2) Buka **Panduan-Pengguna.html** dulu, lalu ikuti bagian Android atau iPhone.
-> 3) Di aplikasi, tekan **Isi Data Contoh** untuk mencoba.
-> Ada kendala membuka file? Balas pesan ini atau hubungi `[NEED: nomor WA admin]`.
+> 1) Buka link aplikasi: https://utamaibam-commits.github.io/PRODUK-DIGITAL1/kasrapi/
+>    Android: buka di **Chrome** → ⋮ → **Instal aplikasi**. iPhone: buka di **Safari** → Bagikan → **Tambah ke Layar Utama**.
+> 2) Selalu buka KasRapi dari ikon di layar HP. Setelah dibuka sekali, jalan tanpa kuota.
+> 3) Di aplikasi, tekan **Isi Data Contoh** untuk mencoba. Panduan lengkap & poster ada di file unduhan.
+> Ada kendala memasang? Balas pesan ini atau hubungi `[NEED: nomor WA admin]`.
 
 ## 5. Catatan kepatuhan klaim
 - Angka 46% (OCBC × NielsenIQ 2024) dan "potongan marketplace hingga ~30%" (Katadata, 2026) dikutip apa adanya, dengan sumber di `/riset/riset-umkm.md`.
