@@ -1,0 +1,25 @@
+{
+  "name": "kasrapi-tiktok-motion",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Video promosi TikTok 9:16 untuk KasRapi (Remotion)",
+  "scripts": {
+    "studio": "remotion studio",
+    "render:v1": "remotion render KasRapi-V1-UangKemana out/KasRapi-V1-UangKemana.mp4",
+    "render:v2": "remotion render KasRapi-V2-PotonganShopee out/KasRapi-V2-PotonganShopee.mp4",
+    "render:v3": "remotion render KasRapi-V3-UangDapur out/KasRapi-V3-UangDapur.mp4",
+    "render:all": "npm run render:v1 && npm run render:v2 && npm run render:v3",
+    "cover": "remotion still KasRapi-V1-UangKemana out/cover.png --frame=420"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.543",
+    "@remotion/google-fonts": "4.0.543",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.543"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "typescript": "5.6.3"
+  }
+}
