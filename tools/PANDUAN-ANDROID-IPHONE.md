@@ -47,7 +47,7 @@ Aplikasi Anda adalah **1 file** bernama **`Aplikasi-UMKM.html`**. Tidak perlu in
 
 **Penting dibaca dulu:** iPhone tidak bisa menjalankan file `.html` langsung dari aplikasi **File** bawaan. Kalau dibuka di sana, yang tampil hanya pratinjau atau tulisan kode, dan tombol tidak bisa ditekan. Solusinya adalah memakai aplikasi penampil **gratis** yang bisa menjalankan file HTML secara **offline**. Cukup dipasang sekali.
 
-Aplikasi yang kami sarankan: **Documents by Readdle** (gratis di App Store).
+Aplikasi yang kami sarankan: **Documents (Readdle)** (gratis di App Store).
 
 ### Langkah 1 — Simpan file dari Lynk.id ke iPhone
 1. Buka link unduhan Lynk.id menggunakan **Safari**.
@@ -55,8 +55,8 @@ Aplikasi yang kami sarankan: **Documents by Readdle** (gratis di App Store).
 3. Ketuk ikon **panah biru ⬇︎** di kolom alamat Safari untuk melihat unduhan.
 4. File tersimpan otomatis di aplikasi **File (Files) → Unduhan (Downloads)**.
 
-### Langkah 2 — Pasang Documents by Readdle (sekali saja)
-1. Buka **App Store** → cari **Documents by Readdle** → ketuk **Dapatkan**.
+### Langkah 2 — Pasang Documents (Readdle) (sekali saja)
+1. Buka **App Store** → cari **Documents Readdle**, lalu pilih **Documents - File Manager App** dari **Readdle Technologies** (ikon huruf D kuning-hijau; lewati hasil berlabel *Iklan*) → ketuk **Dapatkan**.
 2. Buka aplikasinya sekali, lewati halaman perkenalan.
 
 ### Langkah 3 — Pindahkan file ke Documents
@@ -97,7 +97,7 @@ Aplikasi yang kami sarankan: **Documents by Readdle** (gratis di App Store).
 ## E. Masalah yang Sering Terjadi
 
 **Yang muncul hanya tulisan kode.**
-File terbuka di penampil teks. Android: buka dengan **Chrome**. iPhone: buka lewat **Documents by Readdle**.
+File terbuka di penampil teks. Android: buka dengan **Chrome**. iPhone: buka lewat **Documents (Readdle)**.
 
 **Data saya hilang setelah dibuka lagi.**
 Kemungkinan file dibuka lewat aplikasi/jalur berbeda, atau data browser terhapus. Coba buka lewat jalur yang biasa. Lalu pulihkan dari file backup terakhir (Pengaturan → Restore Data).

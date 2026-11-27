@@ -109,7 +109,7 @@ Warung & toko kelontong, kuliner rumahan & frozen food, olshop fashion/kosmetik,
 Tidak. Internet hanya dipakai kalau Anda menekan tombol Kirim ke WhatsApp.
 
 **Bisa di iPhone?**
-Bisa. Karena aturan iPhone, file HTML perlu dibuka lewat aplikasi gratis **Documents by Readdle** (sekali pasang, tetap offline). Langkahnya ada di panduan.
+Bisa. Karena aturan iPhone, file HTML perlu dibuka lewat aplikasi gratis **Documents - File Manager App** dari Readdle (sekali pasang, tetap offline). Langkahnya ada di panduan.
 
 **Ada biaya bulanan?**
 Tidak ada. Bayar sekali Rp59.000, pakai seterusnya.
