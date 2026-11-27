@@ -19,7 +19,7 @@ src/
 ```
 
 ## Sebelum render
-1. Ganti `lynkUrl: 'lynk.id/namatokokamu'` di `src/Root.tsx` dengan link toko Lynk.id Anda (atau ubah di panel Props Remotion Studio).
+1. Link toko sudah diisi `lynk.id/ibam2178` di `src/Root.tsx` (ubah di sana atau di panel Props Remotion Studio bila berganti).
 2. Pastikan internet menyala saat render pertama (font Plus Jakarta Sans diunduh dari Google Fonts).
 
 ## Perintah terminal untuk merender MP4 di komputer Anda
@@ -55,14 +55,12 @@ Windows: jalankan perintah di atas lewat **PowerShell** atau **Command Prompt**;
 
 Laptop lambat? Tambahkan `--concurrency=2` di akhir perintah render.
 
-## Menambah voiceover & musik
-Rekam voiceover sesuai script di `HOOK-DAN-SCRIPT.md`, simpan sebagai `public/voiceover.mp3`, lalu di `src/KasRapiPromo.tsx` tambahkan:
-```tsx
-import {Audio, staticFile} from 'remotion';
-// di dalam <AbsoluteFill>, sebelum <Series>:
-<Audio src={staticFile('voiceover.mp3')} />
-```
-Atau tambahkan musik langsung di aplikasi TikTok saat upload (pilih dari Commercial Music Library agar aman hak cipta).
+## Audio: musik, sound effect & voiceover (sudah terpasang)
+Ketiga video sudah lengkap dengan audio, jadi tidak perlu tambah musik lagi di TikTok.
+- **Musik latar & sound effect**: dibuat sendiri secara sintetis oleh `scripts/buat-audio.py` (bebas hak cipta, aman dari klaim Content ID). Hasil: `public/audio/music.wav` dan `public/audio/sfx/*.wav`. Buat ulang dengan `python3 scripts/buat-audio.py` (butuh numpy).
+- **Voiceover**: suara pria Bahasa Indonesia dari Speko (provider Cartesia), satu file per video: `public/audio/vo-v1.wav`, `vo-v2.wav`, `vo-v3.wav`. Tiap kalimat sudah disinkronkan ke adegannya.
+- **Pengaturan mix**: `src/SoundTrack.tsx` (daftar SFX per frame, volume musik otomatis turun saat ada voiceover).
+- Ganti voiceover: timpa file `public/audio/vo-vN.wav` dengan rekaman sendiri (durasi maks 28 detik), lalu render ulang. Kosongkan prop `voiceover` di `src/Root.tsx` untuk versi tanpa suara narator.
 
 ## Lisensi Remotion
 Gratis untuk perorangan dan perusahaan dengan maksimal 3 karyawan. Perusahaan lebih besar butuh lisensi (lihat https://remotion.dev/license).

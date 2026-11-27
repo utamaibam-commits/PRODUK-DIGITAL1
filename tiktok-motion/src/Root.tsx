@@ -19,7 +19,9 @@ export const RemotionRoot: React.FC = () => (
         line2: 'Uangnya ke mana?',
         emoji: '😩',
         price: 'Rp59rb',
-        lynkUrl: 'lynk.id/namatokokamu',
+        lynkUrl: 'lynk.id/ibam2178',
+        voiceover: 'audio/vo-v1.wav',
+        voiceoverStart: 0,
       }}
     />
     <Composition
@@ -35,7 +37,9 @@ export const RemotionRoot: React.FC = () => (
         line2: 'untungmu cuma Rp14.350',
         emoji: '😱',
         price: 'Rp59rb',
-        lynkUrl: 'lynk.id/namatokokamu',
+        lynkUrl: 'lynk.id/ibam2178',
+        voiceover: 'audio/vo-v2.wav',
+        voiceoverStart: 0,
       }}
     />
     <Composition
@@ -51,7 +55,9 @@ export const RemotionRoot: React.FC = () => (
         line2: 'Kamu nggak sendiri',
         emoji: '🍳',
         price: 'Rp59rb',
-        lynkUrl: 'lynk.id/namatokokamu',
+        lynkUrl: 'lynk.id/ibam2178',
+        voiceover: 'audio/vo-v3.wav',
+        voiceoverStart: 0,
       }}
     />
   </>

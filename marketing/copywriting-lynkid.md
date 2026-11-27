@@ -148,6 +148,7 @@ Usaha Anda sudah bekerja keras setiap hari. Sekarang saatnya tahu berapa yang be
 ## 3. Bio TikTok & teks link
 
 - **Bio:** `Tools UMKM offline, sekali bayar 👇 Catat jualan → laba bersih langsung kelihatan`
+- **Link di bio:** https://lynk.id/ibam2178
 - **Judul tombol link di Lynk.id:** `📒 KasRapi: Cek Laba Bersih Jualanmu (Rp59rb)`
 
 ## 4. Pesan otomatis setelah pembelian (Lynk.id "pesan untuk pembeli")
