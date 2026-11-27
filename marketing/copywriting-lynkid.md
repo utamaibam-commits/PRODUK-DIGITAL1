@@ -14,7 +14,7 @@ Skill yang dipakai: `copywriting` (diagnosis + three-question gate + aturan "No 
 | Harga | **Rp59.000** (sekali bayar) |
 | Harga coret | Kosongkan, kecuali memang pernah dijual dengan harga lebih tinggi. Harga coret palsu melanggar aturan perlindungan konsumen. |
 | Kategori | Produk Digital / Template & Tools |
-| File yang dikirim ke pembeli (zip) | `Aplikasi-UMKM.html`, `Panduan-Pengguna.html`, `PANDUAN-ANDROID-IPHONE.md` |
+| File yang dikirim ke pembeli (zip) | `Aplikasi-UMKM.html`, `Panduan-Pengguna.html`, `PANDUAN-ANDROID-IPHONE.md`, `Poster-Panduan-Pemasangan.png` + `.pdf` |
 | Gambar sampul | Tangkapan layar Beranda (mode terang) di bingkai HP + teks "Laba bersih langsung kelihatan". Ambil dari frame video TikTok detik 12–14. |
 
 **Kenapa Rp59.000:** di tengah rentang Rp49–79 rb. Lebih murah dari 1 bulan langganan aplikasi kasir online pada umumnya, dan masih di bawah ambang "mikir dua kali" untuk pembelian impulsif dari TikTok. Siapkan **bundling Rp89.000** dengan Kalkulator HPP UMKM (produk lama) untuk pembeli yang ingin paket lengkap "tentukan harga → catat untung".
@@ -98,6 +98,7 @@ Warung & toko kelontong, kuliner rumahan & frozen food, olshop fashion/kosmetik,
 - `Aplikasi-UMKM.html`: aplikasi KasRapi (1 file, jalan offline)
 - `Panduan-Pengguna.html`: panduan bergambar Android & iPhone, bisa dibaca di HP atau dicetak
 - `PANDUAN-ANDROID-IPHONE.md`: panduan versi teks
+- Poster 1 halaman cara pasang di Android, iPhone & laptop (PNG untuk HP, PDF siap cetak)
 - Menu Bantuan di dalam aplikasi: pilih "Pengguna Android" atau "Pengguna iPhone (iOS)"
 
 ---

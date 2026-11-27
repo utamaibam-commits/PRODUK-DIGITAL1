@@ -8,7 +8,8 @@ TOOLS PRODUK DIGITAL UMKM
 | [`riset/riset-umkm.md`](riset/riset-umkm.md) | Riset masalah UMKM, alasan memilih ide, spesifikasi fitur |
 | [`tools/Aplikasi-UMKM.html`](tools/Aplikasi-UMKM.html) | Aplikasi 1 file, 100% offline (Android, iPhone, laptop) |
 | [`tools/PANDUAN-ANDROID-IPHONE.md`](tools/PANDUAN-ANDROID-IPHONE.md) · [`tools/Panduan-Pengguna.html`](tools/Panduan-Pengguna.html) | Panduan untuk pembeli |
+| [`tools/Poster-Panduan-Pemasangan.png`](tools/Poster-Panduan-Pemasangan.png) · [`.pdf`](tools/Poster-Panduan-Pemasangan.pdf) · [`.html`](tools/Poster-Panduan-Pemasangan.html) | Poster 1 halaman A4: cara pasang di Android, iPhone, laptop |
 | [`marketing/copywriting-lynkid.md`](marketing/copywriting-lynkid.md) | Copywriting halaman produk Lynk.id |
 | [`tiktok-motion/`](tiktok-motion/) | 3 hook + script, proyek Remotion video TikTok 9:16, perintah render |
 
-File yang dikirim ke pembeli Lynk.id: `tools/Aplikasi-UMKM.html` + `tools/Panduan-Pengguna.html` + `tools/PANDUAN-ANDROID-IPHONE.md` (dijadikan 1 zip).
+File yang dikirim ke pembeli Lynk.id: `tools/Aplikasi-UMKM.html` + `tools/Panduan-Pengguna.html` + `tools/PANDUAN-ANDROID-IPHONE.md` + `tools/Poster-Panduan-Pemasangan.png/.pdf` (dijadikan 1 zip).
