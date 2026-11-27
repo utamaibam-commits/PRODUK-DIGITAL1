@@ -10,12 +10,12 @@ Skill yang dipakai: `copywriting` (diagnosis + three-question gate + aturan "No 
 
 | Kolom Lynk.id | Isi |
 |---|---|
-| Nama produk | **KasRapi: Aplikasi Buku Kas, Stok & Laba Bersih UMKM (Offline, Android & iPhone)** |
+| Nama produk | **KasRapi: Aplikasi Buku Kas, Stok & Laba Bersih UMKM (Android, iPhone, Laptop, Offline)** |
 | Harga | **Rp59.000** (sekali bayar) |
 | Harga coret | Kosongkan, kecuali memang pernah dijual dengan harga lebih tinggi. Harga coret palsu melanggar aturan perlindungan konsumen. |
 | Kategori | Produk Digital / Template & Tools |
-| File yang dikirim ke pembeli (zip) | `Aplikasi-UMKM.html`, `Panduan-Pengguna.html`, `PANDUAN-ANDROID-IPHONE.md`, `Poster-Panduan-Pemasangan.png` + `.pdf` |
-| Gambar sampul | Tangkapan layar Beranda (mode terang) di bingkai HP + teks "Laba bersih langsung kelihatan". Ambil dari frame video TikTok detik 12–14. |
+| File yang dikirim ke pembeli (zip) | `LINK-APLIKASI.txt`, `Aplikasi-UMKM.html`, `Panduan-Pengguna.html`, `PANDUAN-ANDROID-IPHONE.md`, `Poster-Panduan-Pemasangan.png` + `.pdf` |
+| Gambar sampul | `marketing/KasRapi-Cover-Lynkid.png` (1080×1080): Beranda di bingkai HP + "Laba bersih langsung kelihatan" + harga. |
 
 **Kenapa Rp59.000:** di tengah rentang Rp49–79 rb. Lebih murah dari 1 bulan langganan aplikasi kasir online pada umumnya, dan masih di bawah ambang "mikir dua kali" untuk pembelian impulsif dari TikTok. Siapkan **bundling Rp89.000** dengan Kalkulator HPP UMKM (produk lama) untuk pembeli yang ingin paket lengkap "tentukan harga → catat untung".
 
