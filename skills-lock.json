@@ -1,0 +1,725 @@
+{
+  "version": 2,
+  "skills": {
+    "ab-testing": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/ab-testing/SKILL.md",
+      "computedHash": "56e4fd344bf686d5d3a083b2728a9fd65f173f047a6535eeb05712dd7ee10f13",
+      "installMode": "copy"
+    },
+    "ad-creative": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/ad-creative/SKILL.md",
+      "computedHash": "21f151626df70971bfe3c768f0d180eb063e877e00c66bd740e02cbc24324828",
+      "installMode": "copy"
+    },
+    "ads": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/ads/SKILL.md",
+      "computedHash": "e17bd2849ceed2e196a1988516f28f9b498334c2990a34be5d68ac1ee9877707",
+      "installMode": "copy"
+    },
+    "ai-seo": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/ai-seo/SKILL.md",
+      "computedHash": "bb68811a6f0f5e2f734ae2683132d5932bdf4a1a9e109fd719fe9cf2a727a0ff",
+      "installMode": "copy"
+    },
+    "analytics": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/analytics/SKILL.md",
+      "computedHash": "d427971cc71c44d5c8734195ff69288a75c2022b97a9170ee9312256560a5f72",
+      "installMode": "copy"
+    },
+    "animated-chart": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/animated-chart/SKILL.md",
+      "computedHash": "bf7f8644e66c3f9101d582642fb21b4c409011144741784323e7fb946c25a077",
+      "installMode": "copy"
+    },
+    "apple-launch-film": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/apple-launch-film/SKILL.md",
+      "computedHash": "9d6c49377921c1607fadf188a28d7e863f64ad83ac06962b058b076795f5f90b",
+      "installMode": "copy"
+    },
+    "aso": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/aso/SKILL.md",
+      "computedHash": "2a1c92aea59389a5a7379cd07360ce1dfd3de5765c19424ea293e7e581c7ee68",
+      "installMode": "copy"
+    },
+    "attribution": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/attribution/SKILL.md",
+      "computedHash": "38d7aceab5765ff455440bdfc0b747369054f5622cabdc40a32c298b6275ce7f",
+      "installMode": "copy"
+    },
+    "brag": {
+      "source": "latent-spaces/brag",
+      "commit": "06379432a9243c951dfcc051153be18d2d261044",
+      "sourceType": "github",
+      "skillPath": "skills/brag/SKILL.md",
+      "computedHash": "031ed3d7176bd3808b031595bd2d5b46072375b54a23a78c02e5cdc137191c90",
+      "installMode": "copy"
+    },
+    "brag-slim": {
+      "source": "latent-spaces/brag",
+      "commit": "06379432a9243c951dfcc051153be18d2d261044",
+      "sourceType": "github",
+      "skillPath": "skills/brag-slim/SKILL.md",
+      "computedHash": "dfdaf2ec5dd2f10efbb169350b228b58fb5cab03d2f2079e26cbbba5e0fea0e7",
+      "installMode": "copy"
+    },
+    "brand-intake": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/brand-intake/SKILL.md",
+      "computedHash": "a4ab9773c4e82b9c7453aed3ca68442bdc705944f1a4e7c2ff89c9a0d394a848",
+      "installMode": "copy"
+    },
+    "churn-prevention": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/churn-prevention/SKILL.md",
+      "computedHash": "de31f41ad671c6237b61423a475eb9b9f7973a4eb629a3c38bbf7b49e24aabbe",
+      "installMode": "copy"
+    },
+    "co-marketing": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/co-marketing/SKILL.md",
+      "computedHash": "0d51144f2e9595dd033b44c0e84c6aeae3db4d7ccf9ab1ac7792990d8e72116f",
+      "installMode": "copy"
+    },
+    "cold-email": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/cold-email/SKILL.md",
+      "computedHash": "fde085e02f3ff4e79bbb4f862a6f6261f2c84ca2bb1493834237e6df01bf6b0d",
+      "installMode": "copy"
+    },
+    "community-marketing": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/community-marketing/SKILL.md",
+      "computedHash": "20973073c347b9aeccb6933aea1cfb6f3748f314af761673432ffd9ed6ad1e0c",
+      "installMode": "copy"
+    },
+    "competitor-profiling": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/competitor-profiling/SKILL.md",
+      "computedHash": "76efcbc21f1aedb9003897638bba2adf265c05415e57444078c57a7a1021f3c2",
+      "installMode": "copy"
+    },
+    "competitors": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/competitors/SKILL.md",
+      "computedHash": "4a4740d93a85de0d5f3d5d99073a7ed2f953677dfefa9148654ff8ae6726018a",
+      "installMode": "copy"
+    },
+    "content-strategy": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/content-strategy/SKILL.md",
+      "computedHash": "94a23ddb279c20ea8c7c7751eb07f548c855a5287aed8983f31e63b49e7dbf1a",
+      "installMode": "copy"
+    },
+    "conversion-tracking": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/conversion-tracking/SKILL.md",
+      "computedHash": "6847a545bf3ca478cf61c822652f1a940103a8bed899960e1d6303bf7f6def6e",
+      "installMode": "copy"
+    },
+    "copy-editing": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/copy-editing/SKILL.md",
+      "computedHash": "faf2d2cb156cdebe9b7ad16df2d25e42494e6069b33f237f5cdd24b04853636b",
+      "installMode": "copy"
+    },
+    "copywriting": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/copywriting/SKILL.md",
+      "computedHash": "6b86be15d7e8397c27d339fbcbf72718854f96f096ca617889e45b5b8174c393",
+      "installMode": "copy"
+    },
+    "cro": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/cro/SKILL.md",
+      "computedHash": "cc8040529654755144b4dedce5f075ead4667969978257596a05fa4282a5b42f",
+      "installMode": "copy"
+    },
+    "customer-research": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/customer-research/SKILL.md",
+      "computedHash": "8acf4898d060811ac99940b75f47293fe37b1f8da4ecdf81aa2511618587d5bb",
+      "installMode": "copy"
+    },
+    "directory-submissions": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/directory-submissions/SKILL.md",
+      "computedHash": "5d6c7a35c7fc89362c9d4db82f9c657ef600508dcc293e087a6f54ba306cea2c",
+      "installMode": "copy"
+    },
+    "emails": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/emails/SKILL.md",
+      "computedHash": "85084a8b4df7be945ebb539c6b0a83dca7d29d3f8fb375f9af282ca320364fbe",
+      "installMode": "copy"
+    },
+    "events": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/events/SKILL.md",
+      "computedHash": "4e6d76dfbc37019549ef6859c834b9e190dc58cd4ba80eb5557f04e379725681",
+      "installMode": "copy"
+    },
+    "free-tools": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/free-tools/SKILL.md",
+      "computedHash": "8ac6a6881df107a32d1ed74dc0d9ae52232c7416fe4acc37ae1f281f9668e49b",
+      "installMode": "copy"
+    },
+    "generative-media-director": {
+      "source": "frankxai/awesome-motion-design-agent-skills",
+      "commit": "e7dc6e2e728c918ffcea5edb2d7c94e2a6f7785d",
+      "sourceType": "github",
+      "skillPath": "skills/generative-media-director/SKILL.md",
+      "computedHash": "327864c6aad55885b62d9e6fe7bd77e105f38d2269d27b0b70a5e2afd3f8e4eb",
+      "installMode": "copy"
+    },
+    "image": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/image/SKILL.md",
+      "computedHash": "97ffb6d97131e3278f7922ec79893e6fb67f2eb4c91fb7e5e77b0140a8373604",
+      "installMode": "copy"
+    },
+    "influencer-marketing": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/influencer-marketing/SKILL.md",
+      "computedHash": "6af66c88c80c4ccc4683ecbdfea454b0063259f02d610303fef43f75ffdf918a",
+      "installMode": "copy"
+    },
+    "launch": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/launch/SKILL.md",
+      "computedHash": "585ae1023f9178c84490bf5fcf2a0e0d1dc418e215f3c8d813f3e648acaac5c1",
+      "installMode": "copy"
+    },
+    "launch-video": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/launch-video/SKILL.md",
+      "computedHash": "0122a7e03c22a51693ac2c59269d3a4337dbb4ee2f6bdc9625cb6b1087c2a12e",
+      "installMode": "copy"
+    },
+    "lead-magnets": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/lead-magnets/SKILL.md",
+      "computedHash": "d6eea3541ee5761567d7a7ea7758e1a2900a386f86b042d34c1ee6240b9b00f9",
+      "installMode": "copy"
+    },
+    "link-building": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/link-building/SKILL.md",
+      "computedHash": "828cd35f2f0c059f42d26ab6ee9fe426bff00f4e36d7f3d228d74e550773d227",
+      "installMode": "copy"
+    },
+    "loop-cover": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/loop-cover/SKILL.md",
+      "computedHash": "2fcd6dc8dd4f8efa63bd2b068ba0d31b311c30ef2fa8b4caa09ca95d6b5ef384",
+      "installMode": "copy"
+    },
+    "marketing-council": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/marketing-council/SKILL.md",
+      "computedHash": "55a4da1a4d3b0c7c3686d63af8b57ac3f7306e1ac306ca1a274b9bc6c74126b0",
+      "installMode": "copy"
+    },
+    "marketing-ideas": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/marketing-ideas/SKILL.md",
+      "computedHash": "98eaa42d604e487b9b39d8dd894bba95fb86d53154f5481f797ca23b8600d336",
+      "installMode": "copy"
+    },
+    "marketing-loops": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/marketing-loops/SKILL.md",
+      "computedHash": "dce5fa669ac1f201cc01916d120647ff6efc8abbe685fa7d48d541be93f5e9ae",
+      "installMode": "copy"
+    },
+    "marketing-plan": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/marketing-plan/SKILL.md",
+      "computedHash": "71c72784b864fa63782fe96bce4cac48d54a66a20518afedb63c10774e170e21",
+      "installMode": "copy"
+    },
+    "marketing-psychology": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/marketing-psychology/SKILL.md",
+      "computedHash": "9542dca644cf683b8d171b962054679a51b2e740bfad0692c2edcfd85d129c9c",
+      "installMode": "copy"
+    },
+    "milestone-reveal": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/milestone-reveal/SKILL.md",
+      "computedHash": "99f107102ac218f40c294015c437ac68524416c8b6d962c9dba9dda4d9bf98a9",
+      "installMode": "copy"
+    },
+    "model-showdown": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/model-showdown/SKILL.md",
+      "computedHash": "c4c32be9c9816dff005c203dfa95c423df2aae70188800b4e6cfa1ee8dd6add4",
+      "installMode": "copy"
+    },
+    "motion-brief-writer": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/motion-brief-writer/SKILL.md",
+      "computedHash": "b2e846aaa2624bf95202ee290ba8a07eafadc4438911f382ce0f48d018236c13",
+      "installMode": "copy"
+    },
+    "motion-director": {
+      "source": "frankxai/awesome-motion-design-agent-skills",
+      "commit": "e7dc6e2e728c918ffcea5edb2d7c94e2a6f7785d",
+      "sourceType": "github",
+      "skillPath": "skills/motion-director/SKILL.md",
+      "computedHash": "538766e74d06db1f9072df201564036710bd4b7d8266d725d2f18010ea29a8a9",
+      "installMode": "copy"
+    },
+    "motion-effects": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/motion-effects/SKILL.md",
+      "computedHash": "665f2911af78d794d32cd18c2c775b76ff12699fbbb05d7954eb21bb4f2b2b33",
+      "installMode": "copy"
+    },
+    "motion-prompt-writer": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/motion-prompt-writer/SKILL.md",
+      "computedHash": "a984c4625eea48c3b3ec779b8418f3b1f72b60b912474c5e6b93948d6217b306",
+      "installMode": "copy"
+    },
+    "newsletter-promo": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/newsletter-promo/SKILL.md",
+      "computedHash": "ab4f48303759b75528b0fbd09ba021bc01843b00561b1d5a75d2d69f6a0e0e19",
+      "installMode": "copy"
+    },
+    "offers": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/offers/SKILL.md",
+      "computedHash": "3641ad9980f4cfb0e5b8810b0cfecd7f724b9e0076152930c06de8884d1ad791",
+      "installMode": "copy"
+    },
+    "onboarding": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/onboarding/SKILL.md",
+      "computedHash": "5ce184188474818e786f36cbccac979bff528cc597a17eb241e58868be9c4609",
+      "installMode": "copy"
+    },
+    "paywalls": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/paywalls/SKILL.md",
+      "computedHash": "43b19f7b8ccc79b7566cebc75c96fbe8d74de5c1e183c9b6884e6e5741d2ef0e",
+      "installMode": "copy"
+    },
+    "popups": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/popups/SKILL.md",
+      "computedHash": "c279f5d46798ad27c5a9ae04925bc22e346b04f372ced1d80b2bc5eee4459b16",
+      "installMode": "copy"
+    },
+    "pricing": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/pricing/SKILL.md",
+      "computedHash": "9bea1819645df0b2d95429ecb64745ef5d2940b0bb161a40131eae3db8222813",
+      "installMode": "copy"
+    },
+    "product-marketing": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/product-marketing/SKILL.md",
+      "computedHash": "2b7f80ab415280e3e0a0bcc112af8e24059169642c70fb36e18e44a79f80f505",
+      "installMode": "copy"
+    },
+    "programmatic-seo": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/programmatic-seo/SKILL.md",
+      "computedHash": "f37db3caa28d6e8e7d4bc0b73e65db26cae7dfb15b53d97f58a0f2330bca545b",
+      "installMode": "copy"
+    },
+    "prospecting": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/prospecting/SKILL.md",
+      "computedHash": "f6ec4b140bd20f1811832e2c7d280ba6c5bd4233f0b9d0c6aa89639f6e5b842c",
+      "installMode": "copy"
+    },
+    "public-relations": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/public-relations/SKILL.md",
+      "computedHash": "e8dd380b94e3252568d3dcb03537c4a0080ba6c3d3ba2116fd2fef3d623e82e1",
+      "installMode": "copy"
+    },
+    "reel-export": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/reel-export/SKILL.md",
+      "computedHash": "b1dc112e84eefb44000a2661ddb9d63b96ef0b6d26d0f3d6cc8e4c83de2d425d",
+      "installMode": "copy"
+    },
+    "reference-to-motion": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/reference-to-motion/SKILL.md",
+      "computedHash": "e090335adae1b0233d00fe2e341c19b0a02a18579af7b61765164655de45934f",
+      "installMode": "copy"
+    },
+    "referrals": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/referrals/SKILL.md",
+      "computedHash": "c4c40d5a910cf212f9bd07266ec929811ef5cbaeab6d2b517a8932701f68d802",
+      "installMode": "copy"
+    },
+    "remotion-best-practices": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-best-practices/SKILL.md",
+      "computedHash": "269ff3a2eef0fcbb17e01ee5dbf1488438156e60091703f65932185fca239728",
+      "installMode": "copy"
+    },
+    "remotion-captions": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-captions/SKILL.md",
+      "computedHash": "25753a6f91013f5f9141109173a5adb2313613dcd6a99ba6e47c1f1350d831c5",
+      "installMode": "copy"
+    },
+    "remotion-create": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-create/SKILL.md",
+      "computedHash": "c0efb53c12e6cd08b364179bac63f786d954be3a966972c3aa48a8994394bb94",
+      "installMode": "copy"
+    },
+    "remotion-docs": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-docs/SKILL.md",
+      "computedHash": "fc7ce0e9b7d1b847484f48fd9305e44463e2995b7d8a19aefef0fa81a12c93d9",
+      "installMode": "copy"
+    },
+    "remotion-elements": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-elements/SKILL.md",
+      "computedHash": "d5b32cd2c6085cde92750f0fc972288207e41adebfa755d23d18d98d5c7ebd5d",
+      "installMode": "copy"
+    },
+    "remotion-interactivity": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-interactivity/SKILL.md",
+      "computedHash": "29e92af8b1ba4ca89e939f5a8f52e5d257c69b1cc68ceb4576f9764d214176e2",
+      "installMode": "copy"
+    },
+    "remotion-license": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-license/SKILL.md",
+      "computedHash": "ebce324360283256ea60c30ed4251e8a72a6005f3f232ef6682706531c25a54d",
+      "installMode": "copy"
+    },
+    "remotion-maps": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-maps/SKILL.md",
+      "computedHash": "5d52ed6c043488eb570d3f925ea356de812d3d5214b27fdad68477e0c944441f",
+      "installMode": "copy"
+    },
+    "remotion-markup": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-markup/SKILL.md",
+      "computedHash": "7203452651b1edaafd61c74b3f350ea6ba2b6b03be6ea3d38fe1a0c998b313c6",
+      "installMode": "copy"
+    },
+    "remotion-motion-graphics": {
+      "source": "haidrrrry/claude-remotion-skill",
+      "commit": "1dcbe5e3fc6cf970bd10d3cc05f0a8a5d19d0383",
+      "sourceType": "github",
+      "skillPath": "remotion-motion-graphics/SKILL.md",
+      "computedHash": "c7799765a90eb5cb3e75b6568e8692863ef2b601625cd13058c901d04a694b4e",
+      "installMode": "copy"
+    },
+    "remotion-multimedia": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-multimedia/SKILL.md",
+      "computedHash": "85fed69a46d8b49f2bb5e668f8884d3f7800e35253310013fdf276fe0db8dcbf",
+      "installMode": "copy"
+    },
+    "remotion-render": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-render/SKILL.md",
+      "computedHash": "7d25456c4bef616ed1abe735febb8a061408bee4eca6df0ac118b436db4c6707",
+      "installMode": "copy"
+    },
+    "remotion-saas": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-saas/SKILL.md",
+      "computedHash": "0cff6e20ac032e4aa2550aaec40f4bbaea0d24b27a6a3c8ee2f074c60a0cb9be",
+      "installMode": "copy"
+    },
+    "remotion-studio": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-studio/SKILL.md",
+      "computedHash": "4cc6a4cb0670acbf0b7ff48c7435f45e904d459cda05d91ec050fda975d95980",
+      "installMode": "copy"
+    },
+    "remotion-upgrade": {
+      "source": "remotion-dev/skills",
+      "commit": "a3f4098a2afd0e13f6a6f8c8760e275f75457ea9",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-upgrade/SKILL.md",
+      "computedHash": "ef70077c9c394e442e832f712cc919733220cd7e81fb1ab76052ead5a1aa65ca",
+      "installMode": "copy"
+    },
+    "remotion-video-agent": {
+      "source": "frankxai/awesome-motion-design-agent-skills",
+      "commit": "e7dc6e2e728c918ffcea5edb2d7c94e2a6f7785d",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-video-agent/SKILL.md",
+      "computedHash": "b001c74814ec22569e875cda8fa17d90c658d909e21dd6f02a011f152567cc51",
+      "installMode": "copy"
+    },
+    "reverse-engineer-marketing": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/reverse-engineer-marketing/SKILL.md",
+      "computedHash": "1437cbb1f1563a0a81fb2495d093b9a631d3409c18efd961d61debc366a3ef41",
+      "installMode": "copy"
+    },
+    "revops": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/revops/SKILL.md",
+      "computedHash": "7be8c12ed8228ca60a4a171fd084d7b70dbc1f6417bac066e3f633b53bb0fed4",
+      "installMode": "copy"
+    },
+    "sales-enablement": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/sales-enablement/SKILL.md",
+      "computedHash": "a097c96210ed88e19fdb3a43b4b9e53a4f394bf5942d96af3c1f2c1b3c8b93e8",
+      "installMode": "copy"
+    },
+    "schema": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/schema/SKILL.md",
+      "computedHash": "f8704ea70fc7d7ff985b9d902e52bac2d455baa6678b803b4306c8afb99997b1",
+      "installMode": "copy"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/seo-audit/SKILL.md",
+      "computedHash": "537ccf84d4a257cb1b6a9a3643fe56738632989768e1823ffe206ad1c64cd68a",
+      "installMode": "copy"
+    },
+    "signup": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/signup/SKILL.md",
+      "computedHash": "f6ee15c99bdc3a774f20f6d7a6ff8bf111a9a33431b6962ee34ce307762a3c14",
+      "installMode": "copy"
+    },
+    "site-architecture": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/site-architecture/SKILL.md",
+      "computedHash": "b705d5e242192822cdb1aa2efb48f3efc1fe10cdb97f444066c37a5fd629db88",
+      "installMode": "copy"
+    },
+    "site-motion-excellence-director": {
+      "source": "frankxai/awesome-motion-design-agent-skills",
+      "commit": "e7dc6e2e728c918ffcea5edb2d7c94e2a6f7785d",
+      "sourceType": "github",
+      "skillPath": "skills/site-motion-excellence-director/SKILL.md",
+      "computedHash": "2a793a1e37cdbbbc08186bd7ff4991ca22de85bce8cba62a7c518c68f8eae04c",
+      "installMode": "copy"
+    },
+    "sms": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/sms/SKILL.md",
+      "computedHash": "cdbf361bee341b17188d0279ca714e1a1a211b7ed7cf4a55e6a88a600d2358e7",
+      "installMode": "copy"
+    },
+    "social": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/social/SKILL.md",
+      "computedHash": "a8a42ff595b0fa8e2b3be3a96a88fe0a0fffc7c95076c7d295a0d09f794406ee",
+      "installMode": "copy"
+    },
+    "title-sequence-3d": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/title-sequence-3d/SKILL.md",
+      "computedHash": "c22dae16fed38d03886e1e060f26fa5e70b0b33d318477a9394f9a63d090ec2a",
+      "installMode": "copy"
+    },
+    "video": {
+      "source": "coreyhaines31/marketingskills",
+      "commit": "2bf95edb4ebd37198ab7fd18b99ba95c2145ec64",
+      "sourceType": "github",
+      "skillPath": "skills/video/SKILL.md",
+      "computedHash": "76445cee7d4c53d0a64a24967e6e6d4835a8626c785ac5b34cb8d1d79a88eaf3",
+      "installMode": "copy"
+    },
+    "vox-explainer": {
+      "source": "charlie947/motion-graphics-skills",
+      "commit": "229022ebca76972e119e36ada23a1648d51665ab",
+      "sourceType": "github",
+      "skillPath": "skills/vox-explainer/SKILL.md",
+      "computedHash": "9f7033b698ad90313818325583b9bdf6db824fe1f385210d4a1b73db7c704676",
+      "installMode": "copy"
+    },
+    "web-motion-auditor": {
+      "source": "frankxai/awesome-motion-design-agent-skills",
+      "commit": "e7dc6e2e728c918ffcea5edb2d7c94e2a6f7785d",
+      "sourceType": "github",
+      "skillPath": "skills/web-motion-auditor/SKILL.md",
+      "computedHash": "1d7c75841bee1eccb5dc059033b5e7a6ac44470354bb6771c1239c7884da74c1",
+      "installMode": "copy"
+    }
+  }
+}
